@@ -8,7 +8,7 @@ node{
       sh "${mvnHome}/bin/mvn package"
    }
    stage('Deploy to Tomcat') {
-     sshagent(['deploy-dev']) {
+     sshagent(['l3team']) {
         sh 'scp -o StrictHostKeyChecking=no target/*.war l3team@10.140.79.49:/opt/'
       }
      }
