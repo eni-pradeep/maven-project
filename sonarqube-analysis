@@ -10,7 +10,7 @@ node{
   }
   stage('SonarQube analysis') {
       // withSonarQubeEnv(credentialsId: 'f225455e-ea59-40fa-8af7-08176e86507a', installationName: 'My SonarQube Server') 
-    { // You can override the credential to be used
+      // You can override the credential to be used
      def mvnHome = tool name: 'maven3.3.9', type: 'maven'
      withSonarQubeEnv('sonar49'){
       sh "${mvnHome}/bin/mvn sonar:sonar" 
