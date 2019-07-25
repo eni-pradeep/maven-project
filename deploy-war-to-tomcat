@@ -9,7 +9,7 @@ node{
    }
    stage('Deploy to Tomcat') {
      sshagent(['ids']) {
-       sh 'scp -o StrictHostKeyChecking=no /home/l3team/1.txt l3team@10.140.79.49:/home/l3team/'
+       sh 'scp -o StrictHostKeyChecking=no /home/l3team/1.txt l3team@10.140.79.49:/home/l3team/1.txt'
       }
      }
   }
