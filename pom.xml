@@ -36,6 +36,7 @@
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
+          <executable>/usr/lib/jvm/java-8-openjdk-amd64/bin/javac</executable>
         </configuration>
       </plugin>
 
@@ -43,6 +44,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
+          <executable>/usr/lib/jvm/java-8-openjdk-amd64/bin/javac</executable>
         </configuration>
       </plugin>
 
@@ -80,6 +82,7 @@
               <artifactId>taglist-maven-plugin</artifactId>
             </plugin>
           </reportPlugins>
+          <executable>/usr/lib/jvm/java-8-openjdk-amd64/bin/javac</executable>
         </configuration>
       </plugin>
     </plugins>
