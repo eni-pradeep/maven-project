@@ -5,6 +5,6 @@ node{
    stage('Compile-Package'){
       // Get Maven Home path
       def mvnHome = tool name: 'Maven3.6.0', type: 'maven' //Defining Maven variable and defines Maven Home Directory
-      sudo sh "${mvnHome}/bin/mvn package"
+      sh "${mvnHome}/bin/mvn package"
   }
  } 
