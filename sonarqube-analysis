@@ -1,18 +1,18 @@
 
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/eni-pradeep/maven-project'
+     git 'https://github.com/eni-pradeep/maven-project.git'
    }
    stage('Compile-Package'){
       // Get Maven Home path
-      def mvnHome = tool name: 'maven3.3.9', type: 'maven'
+      def mvnHome = tool name: 'maven-3', type: 'maven' //Defining Maven variable and defines Maven Home Directory
       sh "${mvnHome}/bin/mvn package"
   }
   stage('SonarQube analysis') {
       // withSonarQubeEnv(credentialsId: 'f225455e-ea59-40fa-8af7-08176e86507a', installationName: 'My SonarQube Server') 
       // You can override the credential to be used
-     def mvnHome = tool name: 'maven3.3.9', type: 'maven'
-     withSonarQubeEnv('sonar49'){
+     def mvnHome = tool name: 'maven-3', type: 'maven'
+     withSonarQubeEnv('sonar-6'){
       sh "${mvnHome}/bin/mvn sonar:sonar" 
     }
   }
