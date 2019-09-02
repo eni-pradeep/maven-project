@@ -1,6 +1,6 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/eni-pradeep/maven-project'
+     git 'https://github.com/eni-pradeep/maven-project.git'
    }
    stage('Compile-Package'){
       // Get Maven Home path
